@@ -2,12 +2,12 @@
     "legacy_addon_id": "",
     "title": "Bluesky username validator",
     "description": "",
-    "version_id": 1731671413,
-    "version_string": "1.0.0",
+    "version_id": 1732240591,
+    "version_string": "1.0.1",
     "dev": "Atelier Aphelion",
     "dev_url": "https://atelieraphelion.com/",
     "faq_url": "",
-    "support_url": "",
+    "support_url": "https://xenforo.com/community/threads/bluesky-custom-field-username-validator.227025/",
     "extra_urls": [],
     "require": {
         "SV/StandardLib": [

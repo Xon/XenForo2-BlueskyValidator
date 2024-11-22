@@ -3,6 +3,9 @@
 namespace SV\BlueskyValidator\Validator;
 
 use XF\Validator\AbstractValidator;
+use function is_string;
+use function rtrim;
+use function stripos;
 
 class Bluesky extends AbstractValidator
 {
@@ -24,6 +27,12 @@ class Bluesky extends AbstractValidator
         if (is_string($value) && $value && $value[0] == '@')
         {
             $value = substr($value, 1);
+            // handle @example => example.bsky.social
+            $value = rtrim($value, '.');
+            if (stripos($value, '.') === false)
+            {
+                $value .= '.bsky.social';
+            }
         }
         else if (preg_match('#bsky\.app/profile/(?P<id>[\w\.-_]+)$#ui', $value, $match))
         {
